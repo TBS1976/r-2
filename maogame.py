@@ -33,6 +33,13 @@ class Cat(pygame.sprite.Sprite):
             self.rect.top = 0
         if self.rect.bottom > 640:
             self.rect.bottom = 640
+
+class Marmot(pygame.sprite.Sprite):
+    def __init__(self):
+        super(Marmot,self).__init__()
+        self.surf = pygame.image.load('rw2.png').convert_alpha()
+        self.rect = self.surf.get_rect(center = (500,370))
+        
 def main():
     pygame.init()
     pygame.display.set_caption('土拨鼠制作')
@@ -40,7 +47,12 @@ def main():
 
     bg = Bg()
     cat = Cat()
-    all_sprites = [bg,cat]
+    marmot = Marmot()
+    all_sprites = [bg,cat,marmot]
+
+    pygame.mixer.music.load("yy1.flac")
+    pygame.mixer.music.play(-1)
+    done = False
 
     running = True
     while running:
