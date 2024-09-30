@@ -50,7 +50,7 @@ def main():
     marmot = Marmot()
     all_sprites = [bg,cat,marmot]
 
-    pygame.mixer.music.load("yy1.flac")
+    pygame.mixer.music.load("yy1.ogg")
     pygame.mixer.music.play(-1)
     done = False
 
